@@ -61,7 +61,7 @@ export const DashboardQuickAccess: React.FC<DashboardQuickAccessProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-            Dr. Karthik Clinic · Clinical Operations & Surgery Management
+            Abhinavas Eye Care ip management
             <span className="text-xs px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 font-mono border border-teal-500/30">
               Live Clinical Suite
             </span>

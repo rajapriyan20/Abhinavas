@@ -342,7 +342,7 @@ export const INITIAL_SURGERIES: SurgerySchedule[] = [
     procedureName: "Laparoscopic Cholecystectomy",
     consumablesAndImplants: "Harmonic blade, 10mm clip applier, Endobag, Vicryl 2-0",
     tentativeDate: "2026-10-05",
-    tentativeHospital: "Dr. Karthik Surgical Centre & Specialty Hospital",
+    tentativeHospital: "Abhinavas Eye Care Surgical Centre",
     paymentMode: "Insurance / TPA",
     preoperativeInstructions: "NPO from midnight 10:00 PM. Continue morning anti-hypertensive with sips of water. Stop Aspirin 5 days prior. Bring chest X-ray and ECG.",
     insuranceApprovalAmount: 55000,
@@ -351,7 +351,7 @@ export const INITIAL_SURGERIES: SurgerySchedule[] = [
     estimatedCost: 65000,
     otRoom: "O.T. Suite 2",
     anesthesiaType: "General Anesthesia (GA with ETT)",
-    surgeonName: "Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.",
+    surgeonName: "Senior Consultant Eye Surgeon, M.S. (Ophth)",
     createdAt: "2026-10-01T10:00:00Z"
   },
   {
@@ -371,7 +371,7 @@ export const INITIAL_SURGERIES: SurgerySchedule[] = [
     estimatedCost: 47500,
     otRoom: "O.T. 1",
     anesthesiaType: "General Anesthesia",
-    surgeonName: "Dr. Karthik M.B.B.S., M.D.",
+    surgeonName: "Consultant Vitreo-Retinal Surgeon",
     createdAt: "2026-10-02T14:30:00Z"
   },
   {
@@ -382,7 +382,7 @@ export const INITIAL_SURGERIES: SurgerySchedule[] = [
     procedureName: "Total Knee Arthroplasty (TKR - Unilateral)",
     consumablesAndImplants: "High-Flexion Co-Cr Femoral & Tibial Implants, Bone Cement, Pulsed Lavage, Knee Brace",
     tentativeDate: "2026-10-08",
-    tentativeHospital: "Dr. Karthik Surgical Centre",
+    tentativeHospital: "Abhinavas Eye Care Surgical Centre",
     paymentMode: "Cash",
     preoperativeInstructions: "Pre-anesthesia check-up (PAC) cleared. Dental clearance done. 8 hours overnight fasting.",
     insuranceApprovalAmount: 0,
@@ -391,7 +391,7 @@ export const INITIAL_SURGERIES: SurgerySchedule[] = [
     estimatedCost: 174000,
     otRoom: "Laminar Flow Modular O.T.",
     anesthesiaType: "Combined Spinal-Epidural (CSE)",
-    surgeonName: "Dr. Karthik & Orthopedic Team",
+    surgeonName: "Cornea & Refractive Team",
     createdAt: "2026-10-02T16:00:00Z"
   }
 ];
@@ -478,7 +478,7 @@ export const INITIAL_DISCHARGES: DischargeRecord[] = [
     postCareNotes: "Maintain vacuum dressing seal intact. Keep foot elevated on two pillows while resting. Diabetic sugar log twice daily. Zero weight bearing on right heel.",
     medications: "1. Tab. Amoxiclav 625mg PO BD x 7 days\n2. Tab. Pantoprazole 40mg PO OD before breakfast\n3. Tab. Paracetamol 650mg PO SOS for pain\n4. Continue Insulin Glargine 14 units at 9 PM",
     followUpDate: "2026-10-08",
-    surgeonName: "Dr. Karthik M.B.B.S., M.D.",
+    surgeonName: "Consultant Eye Surgeon",
     summaryNotes: "Post-op wound healthy, granulation tissue progressing well. Discharged in stable ambulating condition.",
     createdAt: "2026-10-01T16:00:00Z"
   }
@@ -488,7 +488,7 @@ export async function seedClinicDataIfEmpty(): Promise<boolean> {
   try {
     const snap = await getDocs(collection(db, 'patients'));
     if (snap.empty) {
-      console.log("Seeding Dr. Karthik clinic records across 4 core modules...");
+      console.log("Seeding Abhinavas Eye Care records across 4 core modules...");
       for (const p of INITIAL_PATIENTS) {
         await setDoc(doc(db, 'patients', p.id), p);
       }

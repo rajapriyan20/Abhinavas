@@ -143,7 +143,7 @@ export const PatientSearchAndReport: React.FC<PatientSearchAndReportProps> = ({
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `Dr_Karthik_Clinic_Unified_Patient_Report_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute('download', `Abhinavas_Eye_Care_Unified_Patient_Report_${new Date().toISOString().slice(0, 10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -382,7 +382,7 @@ export const PatientSearchAndReport: React.FC<PatientSearchAndReportProps> = ({
                     Unified Clinic Master Report (All Patient Details)
                   </h2>
                   <p className="text-xs text-slate-400">
-                    Dr. Karthik Clinic · Complete consolidated record of demographics, surgeries, financial balances, and checkout status.
+                    Abhinavas Eye Care · Complete consolidated record of demographics, surgeries, financial balances, and checkout status.
                   </p>
                 </div>
               </div>

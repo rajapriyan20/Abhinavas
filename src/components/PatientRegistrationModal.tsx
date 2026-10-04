@@ -117,7 +117,7 @@ export const PatientRegistrationModal: React.FC<PatientRegistrationModalProps> =
                 Module I: Patient Registration
               </h2>
               <p className="text-xs text-slate-400">
-                Enroll patient into Dr. Karthik's Clinic clinical records.
+                Enroll patient into Abhinavas Eye Care clinical records.
               </p>
             </div>
           </div>

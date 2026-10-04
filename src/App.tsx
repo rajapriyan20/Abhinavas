@@ -8,7 +8,6 @@ import {
   db, 
   auth, 
   testConnection, 
-  loginWithGoogle, 
   logoutUser, 
   savePatient, 
   deletePatient,
@@ -292,7 +291,6 @@ export default function App() {
           onOpenRegisterModal={() => setIsRegisterModalOpen(true)}
           onNavigateToTab={(tab) => setCurrentTab(tab)}
           currentUser={currentUser}
-          onLogin={loginWithGoogle}
           onLogout={logoutUser}
           onSeedData={handleSeedData}
           isSeeding={isSeeding}
@@ -374,7 +372,7 @@ export default function App() {
                     Clinical Procedure Rate Card Catalog
                   </h1>
                   <p className="text-xs text-slate-400 mt-1">
-                    Standardized surgeon fees, implants, and consumables benchmarks for Dr. Karthik's Clinic.
+                    Standardized surgeon fees, implants, and consumables benchmarks for Abhinavas Eye Care.
                   </p>
                 </div>
                 <button

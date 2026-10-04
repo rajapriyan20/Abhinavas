@@ -402,7 +402,7 @@ export const BillingFinancialsModule: React.FC<BillingFinancialsModuleProps> = (
                     Generate {billType} & Financial Breakdown
                   </h2>
                   <p className="text-xs text-slate-400">
-                    Dr. Karthik Clinic · Complete cost component allocation & patient payable calculation.
+                    Abhinavas Eye Care · Complete cost component allocation & patient payable calculation.
                   </p>
                 </div>
               </div>
@@ -640,13 +640,13 @@ export const BillingFinancialsModule: React.FC<BillingFinancialsModuleProps> = (
               <div className="border-b-2 border-slate-900 pb-4 flex justify-between items-start">
                 <div>
                   <h1 className="text-xl font-black text-slate-950 tracking-tight">
-                    DR. KARTHIK CLINIC & SURGICAL SUITE
+                    ABHINAVAS EYE CARE & SURGICAL SUITE
                   </h1>
                   <p className="text-xs text-slate-600">
-                    Comprehensive Surgical & Inpatient Care · Reg: TN-MED-449102
+                    Comprehensive Eye Surgery & Inpatient Care · Reg: TN-MED-449102
                   </p>
                   <p className="text-xs text-slate-500">
-                    Consulting Surgeon: Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.
+                    Department of Ophthalmology & Surgical Services
                   </p>
                 </div>
                 <div className="text-right text-xs font-mono">
@@ -730,15 +730,15 @@ export const BillingFinancialsModule: React.FC<BillingFinancialsModuleProps> = (
 
               {/* Signature block */}
               <div className="pt-6 flex justify-between items-end text-xs">
-                <div>
-                  <p className="text-slate-500">Thank you for placing your trust in Dr. Karthik Clinic.</p>
-                  <p className="text-[10px] text-slate-400">Computer-generated official statement.</p>
-                </div>
-                <div className="text-right">
-                  <div className="font-bold text-slate-900">Dr. Karthik M.B.B.S., M.D.</div>
-                  <div className="text-slate-600">Authorized Signatory / Accounts Desk</div>
-                </div>
-              </div>
+                 <div>
+                   <p className="text-slate-500">Thank you for placing your trust in Abhinavas Eye Care.</p>
+                   <p className="text-[10px] text-slate-400">Computer-generated official statement.</p>
+                 </div>
+                 <div className="text-right">
+                   <div className="font-bold text-slate-900">Authorized Signatory</div>
+                   <div className="text-slate-600">Accounts & Billing Desk</div>
+                 </div>
+               </div>
             </div>
           </div>
         </div>

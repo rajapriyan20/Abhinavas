@@ -72,7 +72,7 @@ export const DischargeSummaryModule: React.FC<DischargeSummaryModuleProps> = ({
         postCareNotes: postCareNotes.trim(),
         medications: medications.trim(),
         followUpDate,
-        surgeonName: 'Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.',
+        surgeonName: 'Chief Consultant Eye Surgeon, M.S. (Ophthalmology)',
         summaryNotes: summaryNotes.trim(),
         createdAt: new Date().toISOString()
       };
@@ -234,7 +234,7 @@ export const DischargeSummaryModule: React.FC<DischargeSummaryModuleProps> = ({
                     Patient Checkout & Discharge Summary
                   </h2>
                   <p className="text-xs text-slate-400">
-                    Dr. Karthik Clinic · Complete clinical checkout, post-care instructions, and medications.
+                    Abhinavas Eye Care · Complete clinical checkout, post-care instructions, and medications.
                   </p>
                 </div>
               </div>
@@ -435,13 +435,13 @@ export const DischargeSummaryModule: React.FC<DischargeSummaryModuleProps> = ({
               <div className="border-b-2 border-slate-900 pb-4 flex justify-between items-start">
                 <div>
                   <h1 className="text-xl font-black text-slate-950 tracking-tight">
-                    DR. KARTHIK CLINIC & SURGICAL SUITE
+                    ABHINAVAS EYE CARE & SURGICAL SUITE
                   </h1>
                   <p className="text-xs text-slate-600 font-medium">
-                    Department of Surgery & Inpatient Care · Reg: TN-MED-449102
+                    Department of Ophthalmology & Inpatient Surgery · Reg: TN-MED-449102
                   </p>
                   <p className="text-xs text-slate-500">
-                    Chief Surgeon: Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.
+                    Chief Consultant Eye Surgeon, M.S. (Ophthalmology)
                   </p>
                 </div>
                 <div className="text-right text-xs font-mono">
@@ -496,10 +496,10 @@ export const DischargeSummaryModule: React.FC<DischargeSummaryModuleProps> = ({
               <div className="p-3 bg-amber-50 border border-amber-200 rounded text-xs space-y-1">
                 <div className="font-bold text-amber-900">Follow-Up Schedule:</div>
                 <p className="text-amber-800">
-                  Please report to Dr. Karthik Clinic OPD on <strong>{selectedDischargeForPrint.followUpDate}</strong> for wound inspection and suture removal.
+                  Please report to Abhinavas Eye Care OPD on <strong>{selectedDischargeForPrint.followUpDate}</strong> for postoperative ocular inspection and slit-lamp examination.
                 </p>
                 <p className="text-amber-700 text-[11px]">
-                  Emergency SOS: In case of high fever, persistent pain, severe wound soakage, or nausea, contact clinic 24/7 hotline immediately.
+                  Emergency SOS: In case of sudden vision drop, severe ocular pain, redness, or discharge, contact clinic 24/7 hotline immediately.
                 </p>
               </div>
 
@@ -509,8 +509,8 @@ export const DischargeSummaryModule: React.FC<DischargeSummaryModuleProps> = ({
                   <p className="text-slate-500">Electronically generated clinical discharge certificate.</p>
                 </div>
                 <div className="text-right">
-                  <div className="font-bold text-slate-900">Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.</div>
-                  <div className="text-slate-600">Chief Attending Surgeon & Clinic Director</div>
+                  <div className="font-bold text-slate-900">Chief Consultant Eye Surgeon</div>
+                  <div className="text-slate-600">Department of Ophthalmology & Surgery</div>
                 </div>
               </div>
             </div>

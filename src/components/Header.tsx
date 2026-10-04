@@ -3,7 +3,6 @@ import {
   Search, 
   X, 
   UserPlus, 
-  LogIn, 
   LogOut, 
   Clock, 
   Calendar,
@@ -19,7 +18,6 @@ interface HeaderProps {
   onOpenRegisterModal: () => void;
   onNavigateToTab: (tab: any) => void;
   currentUser: User | null;
-  onLogin: () => void;
   onLogout: () => void;
   onSeedData: () => void;
   isSeeding: boolean;
@@ -32,7 +30,6 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenRegisterModal,
   onNavigateToTab,
   currentUser,
-  onLogin,
   onLogout,
   onSeedData,
   isSeeding,
@@ -111,8 +108,8 @@ export const Header: React.FC<HeaderProps> = ({
           <span>Patient Registration</span>
         </button>
 
-        {/* User Auth */}
-        {currentUser ? (
+        {/* User Auth (only display if an active session exists; no login button) */}
+        {currentUser && (
           <div className="flex items-center gap-2 pl-2 border-l border-slate-800">
             {currentUser.photoURL ? (
               <img
@@ -145,15 +142,6 @@ export const Header: React.FC<HeaderProps> = ({
               <LogOut className="w-4 h-4" />
             </button>
           </div>
-        ) : (
-          <button
-            type="button"
-            onClick={onLogin}
-            className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg flex items-center gap-1.5 border border-slate-700 transition-colors"
-          >
-            <LogIn className="w-3.5 h-3.5 text-teal-400" />
-            <span>Staff Login</span>
-          </button>
         )}
       </div>
     </header>

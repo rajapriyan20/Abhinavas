@@ -118,7 +118,7 @@ export const OTListView: React.FC<OTListViewProps> = ({
             </div>
             <div>
               <h2 className="text-sm font-bold text-white uppercase tracking-wider">
-                Dr. Karthik Surgical Centre · Operation Theatre List
+                Abhinavas Eye Care Surgical Centre · Operation Theatre List
               </h2>
               <span className="text-[11px] text-slate-400 font-mono">
                 Date: {selectedDateFilter === 'All' ? 'Consolidated Upcoming Week' : selectedDateFilter}
@@ -126,7 +126,7 @@ export const OTListView: React.FC<OTListViewProps> = ({
             </div>
           </div>
           <span className="text-[11px] text-slate-400 font-mono">
-            Attending Surgeon: Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.
+            Department of Ophthalmology & Vitreo-Retinal Surgery
           </span>
         </div>
 

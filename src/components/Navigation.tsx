@@ -13,7 +13,8 @@ import {
   FileSpreadsheet,
   BadgeCheck,
   CreditCard,
-  Sparkles
+  Sparkles,
+  Eye
 } from 'lucide-react';
 
 export type ActiveTab = 
@@ -72,21 +73,21 @@ export const Navigation: React.FC<NavigationProps> = ({
         {!collapsed ? (
           <div className="flex items-center gap-3 overflow-hidden">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-slate-950 font-black shadow-md shadow-teal-500/20 shrink-0">
-              <Stethoscope className="w-5 h-5 text-slate-950 stroke-[2.5]" />
+              <Eye className="w-5 h-5 text-slate-950 stroke-[2.5]" />
             </div>
             <div className="flex flex-col truncate">
-              <span className="font-bold text-sm tracking-tight text-white flex items-center gap-1.5 truncate">
-                Dr. Karthik Clinic
+              <span className="font-bold text-xs tracking-tight text-white flex items-center gap-1.5 truncate">
+                Abhinavas Eye Care
               </span>
-              <span className="text-[11px] font-medium text-slate-400 truncate">
-                Surgical & Patient Suite
+              <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wider truncate">
+                ip management
               </span>
             </div>
           </div>
         ) : (
           <div className="w-full flex justify-center">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-slate-950 font-black shadow-md shadow-teal-500/20">
-              <Stethoscope className="w-5 h-5 text-slate-950 stroke-[2.5]" />
+              <Eye className="w-5 h-5 text-slate-950 stroke-[2.5]" />
             </div>
           </div>
         )}
@@ -199,20 +200,20 @@ export const Navigation: React.FC<NavigationProps> = ({
         </div>
       </div>
 
-      {/* Attending Physician Card */}
+      {/* Clinic Inpatient Unit Card */}
       <div className="p-3 border-t border-slate-800/80 bg-slate-950/60">
         {!collapsed ? (
           <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-full bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-300 text-xs font-bold shrink-0">
-                DK
+                AE
               </div>
               <div className="flex flex-col min-w-0">
                 <span className="text-xs font-semibold text-slate-200 truncate">
-                  Dr. Karthik
+                  Abhinavas Eye Care
                 </span>
                 <span className="text-[10px] text-slate-400 truncate">
-                  Chief Surgeon & Director
+                  Inpatient & Surgery Unit
                 </span>
               </div>
             </div>
@@ -228,7 +229,7 @@ export const Navigation: React.FC<NavigationProps> = ({
         ) : (
           <div className="flex flex-col items-center gap-1.5">
             <div className="w-8 h-8 rounded-full bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-300 text-xs font-bold">
-              DK
+              AE
             </div>
             <div className={`w-2 h-2 rounded-full ${isFirebaseConnected ? 'bg-emerald-400' : 'bg-amber-400'}`} />
           </div>

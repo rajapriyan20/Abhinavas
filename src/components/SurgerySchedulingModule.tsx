@@ -54,7 +54,7 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
   const [procedureName, setProcedureName] = useState('Laparoscopic Cholecystectomy');
   const [consumablesAndImplants, setConsumablesAndImplants] = useState('Harmonic blade, 10mm clip applier, Endobag, Vicryl 2-0');
   const [tentativeDate, setTentativeDate] = useState(new Date(Date.now() + 86400000 * 2).toISOString().slice(0, 10));
-  const [tentativeHospital, setTentativeHospital] = useState('Dr. Karthik Surgical Centre & Specialty Hospital');
+  const [tentativeHospital, setTentativeHospital] = useState('Abhinavas Eye Care Specialty Hospital & Surgical Suites');
   const [paymentMode, setPaymentMode] = useState<PaymentMode>('Insurance / TPA');
   const [preoperativeInstructions, setPreoperativeInstructions] = useState(
     '1. NPO (Nil per oral / fasting) from midnight 10:00 PM.\n2. Morning anti-hypertensives may be taken with small sips of water.\n3. Stop blood thinners (Aspirin / Clopidogrel) 5 days prior under physician advice.\n4. Bring all pre-anesthesia check-up (PAC) investigations, Chest X-ray, and ECG.'
@@ -104,7 +104,7 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
         estimatedCost: parseFloat(estimatedCost) || 50000,
         otRoom,
         anesthesiaType,
-        surgeonName: 'Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.',
+        surgeonName: 'Chief Eye Surgeon, M.S. (Ophthal), F.A.E.C.',
         createdAt: new Date().toISOString()
       };
 
@@ -165,7 +165,7 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
       <div className="rounded-xl bg-slate-900 border border-slate-800 shadow-sm overflow-hidden">
         <div className="px-5 py-3 border-b border-slate-800 bg-slate-950/60 flex items-center justify-between text-xs font-semibold text-slate-300">
           <span>Scheduled Surgical Procedures</span>
-          <span className="text-slate-400 font-mono text-[11px]">Surgeon: Dr. Karthik</span>
+          <span className="text-slate-400 font-mono text-[11px]">Surgeon: Chief Ophthalmic Surgeon</span>
         </div>
 
         <div className="overflow-x-auto">
@@ -388,7 +388,7 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
                     onChange={(e) => setTentativeHospital(e.target.value)}
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-slate-100"
                   >
-                    <option value="Dr. Karthik Surgical Centre & Specialty Hospital">Dr. Karthik Surgical Centre & Specialty Hospital</option>
+                    <option value="Abhinavas Eye Care Specialty Hospital & Surgical Suites">Abhinavas Eye Care Specialty Hospital & Surgical Suites</option>
                     <option value="Apollo Specialty Hospital (O.T. Block B)">Apollo Specialty Hospital (O.T. Block B)</option>
                     <option value="Fortis Malar Hospital">Fortis Malar Hospital</option>
                     <option value="Kauvery Hospital Surgical Suites">Kauvery Hospital Surgical Suites</option>
@@ -530,7 +530,7 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
                     Procedure Rate Card Library
                   </h2>
                   <p className="text-xs text-slate-400">
-                    Standardized surgeon fees, implants, and consumables benchmarks for Dr. Karthik's Clinic.
+                    Standardized surgeon fees, implants, and consumables benchmarks for Abhinavas Eye Care.
                   </p>
                 </div>
               </div>
@@ -648,13 +648,13 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
               <div className="border-b-2 border-slate-900 pb-4 flex items-center justify-between">
                 <div>
                   <h1 className="text-2xl font-bold text-slate-900 tracking-tight font-sans">
-                    DR. KARTHIK CLINICAL SURGICAL SUITE
+                    ABHINAVAS EYE CARE INPATIENT & SURGICAL SUITE
                   </h1>
                   <p className="text-xs text-slate-600 font-sans font-medium">
-                    Department of Minimal Access & General Surgery · Reg. No: TN-MED-449102
+                    Department of Ophthalmology & Ophthalmic Surgery · Reg. No: TN-MED-449102
                   </p>
                   <p className="text-xs text-slate-500 font-sans">
-                    Consulting Surgeon: Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.
+                    Consulting Surgeon: Chief Ophthalmic Surgeon, M.S. (Ophthal), F.A.E.C.
                   </p>
                 </div>
                 <div className="text-right text-xs font-mono font-sans text-slate-700">
@@ -713,11 +713,11 @@ export const SurgerySchedulingModule: React.FC<SurgerySchedulingModuleProps> = (
               {/* Doctor Signature Block */}
               <div className="pt-8 flex justify-between items-end font-sans">
                 <div className="text-xs text-slate-500">
-                  * Generated electronically via Dr. Karthik Clinical Portal.
+                  * Generated electronically via Abhinavas Eye Care Portal.
                 </div>
                 <div className="text-right space-y-1">
-                  <div className="font-cursive text-xl font-bold text-slate-800">Dr. Karthik</div>
-                  <p className="text-xs font-bold text-slate-900">Dr. Karthik M.B.B.S., M.D., F.I.A.G.E.S.</p>
+                  <div className="font-cursive text-xl font-bold text-slate-800">Abhinavas Eye Care</div>
+                  <p className="text-xs font-bold text-slate-900">Chief Ophthalmic Surgeon, M.S., F.A.E.C.</p>
                   <p className="text-[11px] text-slate-600">Chief Attending Surgeon & Medical Director</p>
                 </div>
               </div>
