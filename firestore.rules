@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // System connection test doc
+    match /test/{testId} {
+      allow read, write: if true;
+    }
+
+    // Patient Records Collection
+    match /patients/{patientId} {
+      allow read, write: if true;
+    }
+    match /patients/{document=**} {
+      allow read, write: if true;
+    }
+
+    // Surgery Scheduling & O.T. List Collection
+    match /surgeries/{surgeryId} {
+      allow read, write: if true;
+    }
+    match /surgeries/{document=**} {
+      allow read, write: if true;
+    }
+
+    // Billing & Financials Collection
+    match /billing/{billId} {
+      allow read, write: if true;
+    }
+    match /billing/{document=**} {
+      allow read, write: if true;
+    }
+
+    // Discharge Summaries Collection
+    match /discharges/{dischargeId} {
+      allow read, write: if true;
+    }
+    match /discharges/{document=**} {
+      allow read, write: if true;
+    }
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

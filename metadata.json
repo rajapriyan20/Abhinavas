@@ -1,0 +1,6 @@
+{
+  "name": "dr_karthik - Inpatient Clinic Management System",
+  "description": "Professional inpatient details management, patient search, bed occupancy, vitals monitoring, and clinical analytics for Dr. Karthik's Clinic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

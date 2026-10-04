@@ -1,0 +1,282 @@
+{
+  "entities": {
+    "Patient": {
+      "title": "Patient",
+      "description": "Patient registration and medical record details",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "MED number / unique patient ID"
+        },
+        "medNo": {
+          "type": "string",
+          "description": "Medical record number"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the patient"
+        },
+        "dob": {
+          "type": "string",
+          "description": "Date of birth (YYYY-MM-DD)"
+        },
+        "mobile": {
+          "type": "string",
+          "description": "Mobile contact number"
+        },
+        "gender": {
+          "type": "string",
+          "description": "Gender of the patient"
+        },
+        "insuranceType": {
+          "type": "string",
+          "description": "Insurance or Non-Insurance classification"
+        },
+        "insuranceProvider": {
+          "type": "string",
+          "description": "Name of insurance company or TPA if insured"
+        },
+        "policyNumber": {
+          "type": "string",
+          "description": "Insurance policy or claim identification number"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last modification timestamp"
+        }
+      },
+      "required": ["id", "medNo", "name", "dob", "mobile", "gender", "insuranceType"]
+    },
+    "SurgerySchedule": {
+      "title": "SurgerySchedule",
+      "description": "Surgery scheduling, implants, O.T. lists, and pre-op details",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Surgery schedule identifier"
+        },
+        "patientId": {
+          "type": "string",
+          "description": "MED number of the patient"
+        },
+        "patientName": {
+          "type": "string",
+          "description": "Name of patient"
+        },
+        "medNo": {
+          "type": "string",
+          "description": "MED number"
+        },
+        "procedureName": {
+          "type": "string",
+          "description": "Surgical procedure name"
+        },
+        "consumablesAndImplants": {
+          "type": "string",
+          "description": "Consumables and surgical implants required"
+        },
+        "tentativeDate": {
+          "type": "string",
+          "description": "Tentative date of surgery (YYYY-MM-DD)"
+        },
+        "tentativeHospital": {
+          "type": "string",
+          "description": "Tentative hospital or surgical center"
+        },
+        "paymentMode": {
+          "type": "string",
+          "description": "Payment mode e.g. Insurance / Cash / Card"
+        },
+        "preoperativeInstructions": {
+          "type": "string",
+          "description": "Pre-operative fasting and medication instructions"
+        },
+        "insuranceApprovalAmount": {
+          "type": "number",
+          "description": "Approved insurance coverage amount"
+        },
+        "hospitalMapping": {
+          "type": "string",
+          "description": "Hospital network tier or admission ward mapping"
+        },
+        "otStatus": {
+          "type": "string",
+          "description": "Status in O.T. queue"
+        },
+        "estimatedCost": {
+          "type": "number",
+          "description": "Estimated total procedure cost"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["id", "patientId", "procedureName", "tentativeDate", "tentativeHospital", "paymentMode", "otStatus"]
+    },
+    "BillingRecord": {
+      "title": "BillingRecord",
+      "description": "Invoices, estimates, receipts, refunds, and cost breakdown",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Bill or invoice number"
+        },
+        "patientId": {
+          "type": "string",
+          "description": "Patient MED number"
+        },
+        "patientName": {
+          "type": "string",
+          "description": "Patient name"
+        },
+        "medNo": {
+          "type": "string",
+          "description": "Patient MED number"
+        },
+        "billType": {
+          "type": "string",
+          "description": "Estimate, Invoice, or Receipt"
+        },
+        "chargesCategory": {
+          "type": "string",
+          "description": "Charges category e.g. General Surgery, Daycare, Orthopedic"
+        },
+        "surgeonFees": {
+          "type": "number",
+          "description": "Surgeon professional charges"
+        },
+        "implantsCost": {
+          "type": "number",
+          "description": "Cost of surgical implants"
+        },
+        "consumablesCost": {
+          "type": "number",
+          "description": "Cost of surgical consumables and disposables"
+        },
+        "othersCoPayment": {
+          "type": "number",
+          "description": "Other expenses or patient co-payment"
+        },
+        "insuranceApprovalAmount": {
+          "type": "number",
+          "description": "Amount approved by insurance"
+        },
+        "totalAmount": {
+          "type": "number",
+          "description": "Total gross amount"
+        },
+        "patientPayable": {
+          "type": "number",
+          "description": "Net payable by patient"
+        },
+        "amountPaid": {
+          "type": "number",
+          "description": "Amount collected from patient"
+        },
+        "refundAmount": {
+          "type": "number",
+          "description": "Refunded amount if cancelled or adjusted"
+        },
+        "status": {
+          "type": "string",
+          "description": "Invoice status"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Billing notes or cancellation reasons"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Billing record date"
+        }
+      },
+      "required": ["id", "patientId", "billType", "totalAmount", "status"]
+    },
+    "DischargeRecord": {
+      "title": "DischargeRecord",
+      "description": "Patient checkout, post-care instructions, and discharge summary",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Discharge summary ID"
+        },
+        "patientId": {
+          "type": "string",
+          "description": "Patient MED number"
+        },
+        "patientName": {
+          "type": "string",
+          "description": "Patient name"
+        },
+        "medNo": {
+          "type": "string",
+          "description": "MED number"
+        },
+        "admissionDate": {
+          "type": "string",
+          "description": "Admission date"
+        },
+        "dischargeDate": {
+          "type": "string",
+          "description": "Discharge date"
+        },
+        "procedurePerformed": {
+          "type": "string",
+          "description": "Surgical procedure performed"
+        },
+        "dischargeCondition": {
+          "type": "string",
+          "description": "Condition at discharge"
+        },
+        "postCareNotes": {
+          "type": "string",
+          "description": "Post-care instructions and wound care"
+        },
+        "medications": {
+          "type": "string",
+          "description": "Discharge medication list and instructions"
+        },
+        "followUpDate": {
+          "type": "string",
+          "description": "Scheduled clinic follow-up date"
+        },
+        "surgeonName": {
+          "type": "string",
+          "description": "Attending surgeon name"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Record creation timestamp"
+        }
+      },
+      "required": ["id", "patientId", "dischargeDate", "procedurePerformed", "dischargeCondition", "postCareNotes"]
+    }
+  },
+  "firestore": {
+    "/patients/{patientId}": {
+      "schema": "Patient",
+      "description": "Registered patients and demographic records"
+    },
+    "/surgeries/{surgeryId}": {
+      "schema": "SurgerySchedule",
+      "description": "Surgery scheduling, O.T. list, and pre-op plans"
+    },
+    "/billing/{billId}": {
+      "schema": "BillingRecord",
+      "description": "Estimates, invoices, receipts, and refund ledgers"
+    },
+    "/discharges/{dischargeId}": {
+      "schema": "DischargeRecord",
+      "description": "Discharge summaries and post-care notes"
+    }
+  }
+}
